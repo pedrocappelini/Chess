@@ -21,10 +21,6 @@ public class Main extends Canvas implements Runnable, MouseListener{
     public static final int HEIGHT = 768;
     public static final int SCALE = 8;
 
-    private int selectedRow = -1;
-    private int selectedCol = -1;
-    private boolean pieceSelected = false;
-
     public static BufferedImage sprite;
     public static BufferedImage blackSquare;
     public static BufferedImage whiteSquare;
