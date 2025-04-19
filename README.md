@@ -36,6 +36,10 @@ All the artwork was created using **Aseprite**.
 - 🔄 **Board Flip (Local Multiplayer)**  
   - Flip the board when switching turns to support two players locally
 
+- 🧹 **General Code Optimizations**  
+  - Refactor and clean up logic where needed  
+  - Improve naming, modularity, and reduce duplication
+
 ---
 
 ## 🧰 Requirements
