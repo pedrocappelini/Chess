@@ -8,6 +8,7 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Objects;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -55,7 +56,7 @@ public class Main extends Canvas implements Runnable, MouseListener{
         addMouseListener(this);
 
             try {
-                sprite = ImageIO.read((Main.class.getResource("/Sprites.png")));
+                sprite = ImageIO.read((Objects.requireNonNull(Main.class.getResource("/Sprites.png"))));
                 blackSquare = sprite.getSubimage(0, 0, 16, 16);
                 whiteSquare = sprite.getSubimage(16, 0, 16, 16);
                 selectedBsquare = sprite.getSubimage(32, 0, 16, 16);
@@ -72,7 +73,7 @@ public class Main extends Canvas implements Runnable, MouseListener{
                 whiteKnight = sprite.getSubimage(48, 32, 16, 16);
                 whiteBishop = sprite.getSubimage(64, 32, 16, 16);
                 whiteKing = sprite.getSubimage(80, 32, 16, 16);
-            } catch (IOException e) {}
+            } catch (IOException ignored) {}
     }
 
     public void setupFrame(){

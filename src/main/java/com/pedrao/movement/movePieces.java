@@ -21,14 +21,12 @@ public class movePieces {
                     }else if(tRow == row-1 || tRow == row+1){
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'r' -> {
                     if ((tCol == col || tRow == row)) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'k' -> {
@@ -39,14 +37,12 @@ public class movePieces {
                         makeMove(row, col, tRow, tCol, piece);
                         
                     }
-                    break;
                 }
 
                 case 'b' -> {
                     if (Math.abs(row - tRow) == Math.abs(col - tCol)) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'q' -> {
@@ -54,14 +50,12 @@ public class movePieces {
                          tCol == col || tRow == row)) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'o' -> {
                     if (Math.abs(row - tRow) <= 1 && Math.abs(col - tCol) <= 1) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
             }
         }else if(!whiteTurn && ableMove(row, col, tRow, tCol)){
@@ -76,14 +70,12 @@ public class movePieces {
                     }else if(tRow == row-1 || tRow == row+1){
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'R' -> {
                     if ((tCol == col || tRow == row) && Main.board.boardPosition[tRow][tCol] == 'E') {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'K' -> {
@@ -93,14 +85,12 @@ public class movePieces {
                         (tRow == row - 1 && (tCol == col + 2 || tCol == col - 2))) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'B' -> {
                     if (Math.abs(row - tRow) == Math.abs(col - tCol)) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'Q' -> {
@@ -108,14 +98,12 @@ public class movePieces {
                          tCol == col || tRow == row)) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
 
                 case 'O' -> {
                     if (Math.abs(row - tRow) <= 1 && Math.abs(col - tCol) <= 1) {
                         makeMove(row, col, tRow, tCol, piece);
                     }
-                    break;
                 }
             }
         }
@@ -220,11 +208,7 @@ public class movePieces {
                 int dRow = Math.abs(tRow - row);
                 int dCol = Math.abs(tCol - col);
 
-                if (dRow <= 1 && dCol <= 1) {
-
-                    return true;
-                }
-                return false;
+                return dRow <= 1 && dCol <= 1;
             }
 
         }
